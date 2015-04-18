@@ -40,8 +40,8 @@ class CnjySpider(scrapy.Spider):
       yield scrapy.http.Request(url=course_tree['url'], callback=lambda response, course_tree=course_tree: self.ParseCourseTree(response, course_tree))
 
     senior = self.ExtractTestDiv(course_list[1])
-    for course in senior:
-      yield course
+    for course_tree in senior:
+      yield scrapy.http.Request(url=course_tree['url'], callback=lambda response, course_tree=course_tree: self.ParseCourseTree(response, course_tree))
 
   def RecursiveCourseTree(self, tree, tree_dict):
     child_list = tree.xpath('ul/li')

@@ -19,3 +19,5 @@ ITEM_PIPELINES = {
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'question_spider (+http://www.yourdomain.com)'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36'
+CONCURRENT_REQUESTS_PER_DOMAIN = 1
+DOWNLOAD_DELAY = 5

@@ -23,16 +23,26 @@ class CourseTree(scrapy.Item):
   course_list = scrapy.Field()
 
 class QuestionProfile(scrapy.Item):
+  # 考点
+  exam_point = scrapy.Field()
   # 题目内容
   content = scrapy.Field()
+  # 选项，如果是选择题的话
+  option_list = scrapy.Field()
   # 答案
   answer = scrapy.Field()
   # 题目对应的url
   url = scrapy.Field()
   # 题型
   question_type = scrapy.Field()
+  # raw_data
+  raw_data = scrapy.Field()
+  # 试题分析
+  analysis = scrapy.Field()
 
 class Questions(scrapy.Item):
+  # 考点
+  exam_point = scrapy.Field()
   # 题目列表，用每道题的url存
   questions = scrapy.Field()
   # 题型
