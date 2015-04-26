@@ -22,7 +22,6 @@ class QuestionProfileSpider(scrapy.Spider):
     type_list = questions_list[1].xpath('a')
     if len(type_list) < 2:
       return
-    question_dict = {}
     for t in type_list[1:]:
       url = t.xpath('@href').extract()
       if len(url) < 1:
